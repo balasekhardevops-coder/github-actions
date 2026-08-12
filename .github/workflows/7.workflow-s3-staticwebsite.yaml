@@ -1,0 +1,35 @@
+name: Workflow S3 Static Website
+
+env:
+  AWS_REGION: us-east-1
+  S3_BUCKET_NAME: thebalabanana.store
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    permissions:
+      id-token: write
+      contents: read
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: arn:aws:iam::758854589827:role/gha-s3-access-role
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Verify AWS Credentials
+        run: aws sts get-caller-identity
+
+      - name: Sync S3 Bucket
+        run: |
+          aws s3 cp index.html s3://${S3_BUCKET_NAME}/index.html

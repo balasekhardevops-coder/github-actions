@@ -1,14 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First HTML Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Balasekhar Nelli — Principal DevOps Engineer specializing in cloud platforms, Kubernetes, Terraform, CI/CD, GitOps, automation, and observability.">
+  <title>Balasekhar Nelli | Principal DevOps Engineer</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="#top">BN<span>.</span></a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+        <a href="https://github.com/balasekhardevops-coder" target="_blank" rel="noopener noreferrer">GitHub DevOps</a>
+        <a href="https://github.com/bnelli123" target="_blank" rel="noopener noreferrer">GitHub Personal</a>
+      </div>
+    </nav>
+  </header>
 
-    <h1>Hello World!</h1>
-    <p>This is my first HTML page.</p>
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">PRINCIPAL DEVOPS ENGINEER</p>
+          <h1>Building reliable cloud platforms and delivery pipelines at scale.</h1>
+          <p class="hero-copy">
+            12 years of experience across DevOps, Site Reliability Engineering, Kubernetes,
+            infrastructure as code, GitOps, automation, observability, and cloud-native operations.
+          </p>
+          <div class="actions">
+            <a class="button primary" href="resume.html">View Resume</a>
+            <a class="button secondary" href="#experience">View Experience</a>
+            <a class="button secondary" href="https://github.com/balasekhardevops-coder" target="_blank" rel="noopener noreferrer">DevOps GitHub</a>
+            <a class="button secondary" href="https://github.com/bnelli123" target="_blank" rel="noopener noreferrer">Personal GitHub</a>
+          </div>
+          <div class="quick-facts">
+            <span>Based in Bangalore, India</span>
+            <span>Immediately available</span>
+          </div>
+        </div>
 
+        <aside class="terminal-card" aria-label="DevOps profile summary">
+          <div class="terminal-bar">
+            <span></span><span></span><span></span>
+          </div>
+          <pre><code>$ whoami
+Balasekhar Nelli
+
+$ cat role.txt
+Principal DevOps Engineer
+
+$ kubectl get expertise
+Kubernetes   Ready
+Terraform    Ready
+CI/CD        Ready
+GitOps       Ready
+Cloud        Ready
+Automation   Ready</code></pre>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container split">
+        <div>
+          <p class="section-label">ABOUT</p>
+          <h2>Cloud-native engineering with an operations-first mindset.</h2>
+        </div>
+        <div class="about-copy">
+          <p>
+            I design and operate enterprise-grade delivery platforms across AWS, Azure, and OCI.
+            My work focuses on repeatable infrastructure, secure Kubernetes operations, automated
+            releases, production reliability, and reducing manual operational effort.
+          </p>
+          <p>
+            I have led CI/CD modernization, Terraform-based provisioning, GitOps adoption,
+            observability improvements, and application migrations across large environments.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section muted" id="skills">
+      <div class="container">
+        <p class="section-label">CORE SKILLS</p>
+        <h2>Focused DevOps capabilities</h2>
+        <div class="skills-grid">
+          <article class="skill-card">
+            <h3>Cloud Platforms</h3>
+            <p>AWS, Azure, OCI, cloud networking, IAM, compute, storage, and managed Kubernetes.</p>
+          </article>
+          <article class="skill-card">
+            <h3>Kubernetes</h3>
+            <p>EKS, AKS, OKE, Helm, Istio, RBAC, scaling, security, upgrades, and production operations.</p>
+          </article>
+          <article class="skill-card">
+            <h3>CI/CD & GitOps</h3>
+            <p>Jenkins, ArgoCD, GitHub Actions, GitLab CI, Azure DevOps, Artifactory, and release automation.</p>
+          </article>
+          <article class="skill-card">
+            <h3>Infrastructure as Code</h3>
+            <p>Terraform, Pulumi, Ansible, CloudFormation, reusable modules, and multi-environment provisioning.</p>
+          </article>
+          <article class="skill-card">
+            <h3>Observability</h3>
+            <p>Prometheus, Grafana, ELK, Splunk, CloudWatch, alerting, dashboards, and incident visibility.</p>
+          </article>
+          <article class="skill-card">
+            <h3>Automation & Security</h3>
+            <p>Python, Bash, Vault, PKI/TLS, Trivy, SonarQube, DevSecOps controls, and operational tooling.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="container">
+        <p class="section-label">EXPERIENCE</p>
+        <h2>Recent roles</h2>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-meta">2020 — 2026</div>
+            <div>
+              <h3>Principal Member of Technical Staff</h3>
+              <p class="company">Oracle India Private Limited</p>
+              <ul>
+                <li>Built multi-stage CI/CD workflows using Jenkins, ArgoCD, and Artifactory.</li>
+                <li>Automated AWS, Azure, and OCI infrastructure with Terraform.</li>
+                <li>Managed EKS, AKS, and OKE platforms, including Helm, RBAC, and reliability controls.</li>
+                <li>Improved production visibility using Prometheus, Grafana, Splunk, and automation.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-meta">2017 — 2020</div>
+            <div>
+              <h3>Senior DevOps Engineer</h3>
+              <p class="company">Tricon Infotech Private Limited</p>
+              <ul>
+                <li>Implemented Jenkins and Azure Pipelines for build, test, artifact, and deployment automation.</li>
+                <li>Created reusable Terraform modules for AWS and Azure.</li>
+                <li>Supported cloud migration, secrets management, and DevSecOps integrations.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-meta">2014 — 2017</div>
+            <div>
+              <h3>DevOps & CloudOps Engineering</h3>
+              <p class="company">Fission Labs and ATMECS</p>
+              <ul>
+                <li>Automated infrastructure and configuration using Chef, Puppet, and CloudFormation.</li>
+                <li>Containerized workloads with Docker and maintained Jenkins-based delivery pipelines.</li>
+                <li>Implemented monitoring, alerting, and operational scripting across production environments.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="container contact-card">
+        <div>
+          <p class="section-label">CONTACT</p>
+          <h2>Open to Principal and Senior DevOps opportunities.</h2>
+          <p>Available for roles focused on DevOps, platform engineering, cloud infrastructure, Kubernetes, and MLOps enablement.</p>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:balasekhar.devops@gmail.com">balasekhar.devops@gmail.com</a>
+          <a href="tel:+918296787406">+91 82967 87406</a>
+          <a href="https://github.com/balasekhardevops-coder" target="_blank" rel="noopener noreferrer">github.com/balasekhardevops-coder</a>
+          <a href="https://github.com/bnelli123" target="_blank" rel="noopener noreferrer">github.com/bnelli123</a>
+          <a class="button primary" href="resume.html">View Resume</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Balasekhar Nelli. Built as a static website on Amazon S3.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
