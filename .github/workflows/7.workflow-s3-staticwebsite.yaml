@@ -25,7 +25,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v6
         with:
           role-to-assume: arn:aws:iam::758854589827:role/gha-demo-role
-          aws-region: ${{ env.AWS_REGION }}
+          aws-region: us-east-1
           role-session-name: GitHub_to_AWS_via_FederatedOIDC
 
       - name: Verify AWS Credentials
@@ -33,4 +33,4 @@ jobs:
 
       - name: Sync S3 Bucket
         run: |
-          aws s3 cp index.html s3://${S3_BUCKET_NAME}/index.html
+          aws s3 cp index.html s3://thebalabanana.store/index.html
