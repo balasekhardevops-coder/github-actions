@@ -12,7 +12,7 @@ jobs:
         - name: "Test step 1"
           run:  echo "In test step"
   deploy:
-      runs_on: ubuntu-latest
+      runs-on: ubuntu-latest
       steps:
         - name: "Deploy step 1"
           run: echo "In deploy step"
