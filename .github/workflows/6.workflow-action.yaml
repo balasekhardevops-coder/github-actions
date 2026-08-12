@@ -1,0 +1,10 @@
+name: Workflow Action Demo
+on: push
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+        - name: "Build Step"
+          run: echo "In Build Step"
+        - name: "Access Workflow Action"
+          uses: actions/checkout@v3
