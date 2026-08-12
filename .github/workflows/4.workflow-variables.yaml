@@ -1,0 +1,11 @@
+name: Workflow with Variables
+on: push
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+        - name: "Build Step"
+          run: echo "In Build Step"
+        - name: "Access Workflow Variables"
+          run: echo "Hello, ${{ vars.MY_NAME }}"
