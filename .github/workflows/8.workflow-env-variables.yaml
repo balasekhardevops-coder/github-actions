@@ -12,9 +12,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        env:
-         APP_ENV: stage
         uses: actions/checkout@v4
 
       - name: Print Environment Variable
+        env:
+         APP_ENV: stage
         run: echo "The application environment is $APP_ENV"
