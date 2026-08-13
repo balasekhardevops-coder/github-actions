@@ -3,7 +3,7 @@ on:
     push:
         branches: 
             - main
-            - development
+            - develop
 jobs:
     demo:
         runs-on: ubuntu-latest
@@ -12,5 +12,5 @@ jobs:
               if: github.ref == 'refs/heads/main'
               run: echo "This step runs only on the main branch"
             - name: Step 2
-              if: github.ref == 'refs/heads/development'
-              run: echo "This step runs only on the development branch"
+              if: github.ref == 'refs/heads/develop'
+              run: echo "This step runs only on the develop branch"
