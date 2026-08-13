@@ -1,5 +1,5 @@
-# Run when the PR is raised
-# Run when commits are pushed to main
+# Run "build" when the PR is raised
+# Run "deploy"  when commits are pushed to main
 
 name: Build and Deploy
 on: 
@@ -10,7 +10,18 @@ on:
         types: [opened, synchronize]
 jobs:
     build:
+        if: github.event_name == 'pull_request'
         runs-on: ubuntu-latest
         steps:
             - name: Build Step
               run: echo "In Build Step"
+    
+    deploy:
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        runs-on: ubuntu-latest
+        needs: build
+        steps: 
+            - name: Deploy Step
+              run: echo "Deploying the application"
+            
+            
