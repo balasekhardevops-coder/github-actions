@@ -1,14 +1,20 @@
 name: Workflow with Outputs
 on: push
 jobs:
-    build:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Build Step
-              id: step1
-              run: echo "version=1.0.0" >> $GITHUB_OUTPUT
-    deploy:
-        runs: ubuntu-latest
-        steps:
-            - name: Deploy Step
+  build:
+    runs-on: ubuntu-latest
+
+    outputs:
+      image_tag: ${{ steps.tag.outputs.image_tag }}
+
+    steps:
+      - id: tag
+        run: echo "image_tag=10-d1ea6e9b" >> "$GITHUB_OUTPUT"
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: echo "Deploying ${{ needs.build.outputs.image_tag }}"
             

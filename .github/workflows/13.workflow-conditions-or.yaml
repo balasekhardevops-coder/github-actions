@@ -1,0 +1,9 @@
+name: workflow with conditions OR
+on: push
+jobs:
+    demo:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Run for Bala or Jahnsi
+              if: github.actor == 'balasekhardevops-coder' || github.actor == 'Jahnsi'
+              run: echo "This step runs only for Bala or Jahnsi"

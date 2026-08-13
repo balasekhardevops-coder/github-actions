@@ -1,0 +1,16 @@
+# Run when the PR is raised
+# Run when commits are pushed to main
+
+name: Build and Deploy
+on: 
+    push: 
+        branches:
+        - main
+    pull_request:
+        types: [opened, synchronize]
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Build Step
+              run: echo "In Build Step"
