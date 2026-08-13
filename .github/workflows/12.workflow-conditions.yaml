@@ -1,0 +1,16 @@
+name: Workflow with conditions
+on: 
+    push:
+        branches: 
+            - main
+            - development
+jobs:
+    demo:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Step 1
+              if: github.ref == 'refs/heads/main'
+              run: echo "This step runs only on the main branch"
+            - name: Step 2
+              if: github.ref == 'refs/heads/development'
+              run: echo "This step runs only on the development branch"
